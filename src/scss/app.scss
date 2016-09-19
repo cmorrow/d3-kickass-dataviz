@@ -1,0 +1,130 @@
+$gutter: 25px;
+
+
+html, body {
+	height: 100%;
+	margin:0;
+}
+
+body {
+	font-family: 'Back Issues BB';
+	background-color: #000;
+	background-image: url('../images/halftone-pattern-red.png');
+	background-position: left top;
+	background-size: 100%;
+}
+
+.caption {
+	display:inline-block;
+	margin: -8px 0 0 $gutter/2;
+	padding: $gutter/2 $gutter 0;
+	background-color: yellow;
+	font-size: 72px;
+	font-weight:bold;
+	border: solid 2px #000;
+	box-shadow: 7px 5px #000;
+}
+
+#adjective {
+	// width: 500px;
+	@extend .caption;
+	
+}
+
+#comicBurst {
+	width: 465px;
+	height: 367px;
+	background: url('../images/comic-burst.png') no-repeat left top;
+
+	.inner {
+		font-family: 'BadaBoom BB';
+		padding-top: 160px;
+		font-size: 44px;
+		padding-left: 120px;
+	}
+}
+
+.slide {
+	position: absolute;
+	top: 50%;
+	margin-top: -325px;
+	height: 670px;
+	width: 100%;
+	background: #000;
+	border-top: solid 6px #000;
+	border-bottom: solid 6px #000;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 0 $gutter;
+	margin: 0 auto;
+}
+
+.subtitle {
+	margin-top: $gutter;
+	font-size: 52px;
+}
+
+.d3-logo {
+	width: 200px;
+	height: 200px;
+}
+
+// Fire text
+#kickass {
+	position: absolute;
+	top: 100px;
+	height: 300px;
+	width: 800px;
+}
+// .kickass {
+// 	font-family: Impact;
+// 	font-weight:bold;
+// 	font-size: 10em;
+// 	text-transform:uppercase;
+//   text-align:center;
+// 	background-clip:text;
+// 	-webkit-font-smoothing:antialiased;
+//   -webkit-background-clip:text;
+//   -moz-background-clip:text;
+//   background-clip:text;
+//   -webkit-text-fill-color:transparent;
+// 	background:url('../images/fire-loop.gif') left top repeat-x;
+// }
+
+.kickass {
+	font-family: Impact;
+	font-weight:bold;
+	font-size: 10em;
+	text-transform:uppercase;
+
+	.text {
+	  fill: url(#firePattern);
+	  stroke: #fff;
+	  stroke-width: 2;
+	  stroke-opacity: .7;
+	  &.two {
+		  fill: url(#firePattern2);
+		}
+	}
+	
+}
+
+
+.fire-bg {
+		width: 100%;
+		-webkit-clip-path: url(#svgPath);
+    clip-path: url(#svgPath);
+    margin:0 auto;
+}
+
+
+
+svg {
+	position:absolute;
+  width: 100%;
+  height: 100%;
+}
+
+

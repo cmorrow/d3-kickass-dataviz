@@ -1,0 +1,20 @@
+{
+  "name": "d3-dataviz-samples",
+  "version": "1.0.0",
+  "description": "Sample D3 code using v4 of the library",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "d3",
+    "javascript"
+  ],
+  "author": "Chris Morrow",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
