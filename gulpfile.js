@@ -4,13 +4,13 @@ var sass        = require('gulp-sass');
 
 gulp.task('static', function() {
     return gulp.src("./src/**/*")
-        .pipe(gulp.dest("app/"));
+        .pipe(gulp.dest("./app/"));
 });
 
 gulp.task('sass', function() {
     return gulp.src("./src/scss/app.scss")
         .pipe(sass())
-        .pipe(gulp.dest("app/css"))
+        .pipe(gulp.dest("./app/css"))
         .pipe(browserSync.stream());
 });
 
@@ -20,7 +20,7 @@ gulp.task('js', function() {
 });
 
 // Static server
-gulp.task('default', ['static'], function() {
+gulp.task('default', ['sass','static'], function() {
     browserSync.init({
         server: {
             baseDir: "./app"
