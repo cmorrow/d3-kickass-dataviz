@@ -1,3 +1,42 @@
+$gutter: 25px;
+$orange: #ff6100;
+
+
 .text-center {
 	text-align: center;
+}
+
+.metal {
+	color: #fff;
+	-webkit-text-stroke: .25px black;
+	-webkit-background-clip: text;
+}
+
+ul {
+	color: #fff;
+	margin-left: $gutter;
+	list-style: none;
+	text-align:left;
+
+	li {
+		position: relative;
+		font-size: 44px;
+		min-height: 70px;
+		padding-left: 70px;
+		margin-bottom: $gutter;
+	}
+
+	li:before {
+		display: block;
+		position: absolute;
+		top: -22px;
+		left: -10px;
+	  content: " ";
+	  width: 60px;
+	  height: 80px;
+	  background: url('../images/fire.gif') no-repeat;
+	  background-position: center 0;
+	  background-size: 95%;
+	  padding-right: 5px;
+	}
 }

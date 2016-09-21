@@ -1,0 +1,64 @@
+.slide { 
+	display: none;
+	position:absolute;
+	top:0;
+	left: $gutter;
+	right: $gutter;
+	height:100%;
+	width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+
+	small {
+		position: relative;
+		top: -.166em;
+	}
+	.step {
+		position: relative;
+	}
+
+	header {
+		padding: $gutter;
+		font-family: 'Squealer';
+		font-size: 2em;
+		color: #fff;
+		margin-bottom: $gutter;
+
+		h1 {
+			@extend .metal;
+			text-align: left;
+		}
+	}
+}
+.content-group {
+	padding-bottom: $gutter*2;
+	overflow: hidden;
+}
+
+/* vertical centering - http://css-tricks.com/centering-in-the-unknown/ */
+.container-center {
+	height: 100%;
+}
+.container-center:before {
+  content: '';
+  display:inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+.content-center {
+	display:inline-block;
+	vertical-align: middle;
+	width: 94%;
+	.step {
+		width: 100%;
+	}
+}
+.content-center-img-fill {
+	@extend .content-center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}

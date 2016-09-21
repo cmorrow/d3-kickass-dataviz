@@ -1,7 +1,5 @@
 @import 'core';
-
-$gutter: 25px;
-$orange: #ff6100;
+@import 'slides';
 
 * {
 	margin:0;
@@ -11,10 +9,11 @@ $orange: #ff6100;
 html, body {
 	height: 100%;
 	margin:0;
+	overflow:hidden;
 }
 
 body {
-	font-family: 'Squealer';
+	font-family: 'Futura';
 	font-size: 24px;
 	background-color: #000;
 }
@@ -63,6 +62,7 @@ body {
 #kickass {
 	position: relative;
 	margin: 0 auto;
+	padding-top: 100px;
 	height: 200px;
 	width: 800px;
 }
@@ -97,29 +97,6 @@ svg {
   height: 100%;
 }
 
-
-
-// Title screen
-
-.title-screen {
-	padding-top: 80px;
-	color: #fff;
-	-webkit-text-stroke: 1px black;
-
-	h1 {
-	  font-size: 72px;
-	  background: -webkit-linear-gradient(#fff, #ccc);
-	  -webkit-background-clip: text;
-	  // -webkit-text-fill-color: transparent;
-		// color: rgba(0,0,0,0.4);
-		// text-shadow: 2px 4px 3px rgba(0,0,0,0.3), 0px -5px 21px rgba(255,255,255,0.5);
-    margin-bottom: $gutter;
-    // -webkit-text-stroke: .5px black;
-   color: #ccc;
-
-	}
-}
-
 .d3-logo {
 	display: block;
 	width: 200px;
@@ -140,4 +117,20 @@ svg {
 	}
 
 	stroke: #fff;
+	stroke-width: 1.5px;
+}
+
+
+
+
+// Title screen
+
+#slide-title {
+	h1 {
+		position: relative;
+	  font-size: 72px;
+	  @extend .metal;
+    margin-bottom: $gutter;
+
+	}
 }

@@ -27,8 +27,8 @@ gulp.task('default', ['sass','static'], function() {
         }
     });
 
-    gulp.watch("./src/scss/*.scss", ['sass']);
-    gulp.watch("./src/**/*.{jpg,png,gif,html}", ['static']);
+    gulp.watch("./src/scss/**/*", ['sass']);
+    gulp.watch("./src/**/*.{jpg,png,gif,html,css}", ['static']);
     gulp.watch("./src/js/*.js", ['js']);
     gulp.watch(["./app/*.html", "./app/js/**/*.js"]).on('change', browserSync.reload);
 });
