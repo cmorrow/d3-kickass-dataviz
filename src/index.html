@@ -3,33 +3,43 @@
 		<link rel="stylesheet" href="css/app.css">
 	</head>
 	<body>
-		<div class="slide">
+		<div class="slide title-screen">
 			
 			<div id="kickass">
-				<svg class="kickass" viewBox="0 0 600 300">
-
+				<svg class="kickass">
+				<defs>
+					<filter id="glow" x="0" y="0" width="800" height="300">
+					<feGaussianBlur stdDeviation="5 5" result="glow"/>
+					<feMerge>
+					<feMergeNode in="glow"/>
+					<feMergeNode in="glow"/>
+					<feMergeNode in="glow"/>
+					</feMerge>
+					</filter>
+				</defs>
 			  <!-- Pattern -->
 			  <pattern 
 			           id="firePattern" 
-			           viewBox="30 100 140 300"
+			           viewBox="30 100 140 330"
 			           patternUnits="userSpaceOnUse"
 			           width="120" height="300"
-			           x="-10" y="50">
+			           x="-10" y="25">
 
 			    <!-- Fire -->
 			    <image xlink:href="images/fire.gif" width="200" height="300"/>
 			  </pattern>
 			  <pattern 
 			           id="firePattern2" 
-			           viewBox="30 100 150 230"
+			           viewBox="30 120 140 330"
 			           patternUnits="userSpaceOnUse"
-			           width="150" height="200"
-			           x="-20" y="35">
+			           width="110" height="300"
+			           x="-40" y="25">
 
 			    <!-- Fire -->
-			    <image xlink:href="images/fire.gif" width="200" height="400"/>
+			    <image xlink:href="images/fire.gif" width="200" height="300"/>
 			  </pattern>
-
+				<text style="filter: url(#glow); fill: #873d10" x="0" y="155">Kick</text>
+				<text style="filter: url(#glow); fill: #873d10" x="320" y="155">ass</text>
 			  <!-- Text -->
 			  <text text-anchor="start"
 			        x="0"
@@ -48,14 +58,48 @@
 			        >
 			    Ass
 			  </text>
+			  <div>
+			  	<h1>Data Visualizations using</h1>
+			  	<!-- <img class="d3-logo" src="images/d3-logo.svg" alt=""> -->
+			  	<svg class="d3-logo" width="960" height="500" viewBox="-10 -10 116 111">
+			  	 <pattern 
+					           id="firePattern3" 
+					           viewBox="30 90 250 380"
+					           patternUnits="userSpaceOnUse"
+					           width="240" height="300"
+					           x="-30" y="-40">
+
+					    <!-- Fire -->
+					    <image xlink:href="images/fire.gif" width="200" height="300"/>
+					  </pattern>
+					  <defs>
+					    <path id="dee" d="M0,0h7.75a45.5,45.5 0 1 1 0,91h-7.75v-20h7.75a25.5,25.5 0 1 0 0,-51h-7.75z"/>
+					    <path id="three" d="M36.2510,0h32a27.75,27.75 0 0 1 21.331,45.5a27.75,27.75 0 0 1 -21.331,45.5h-32a53.6895,53.6895 0 0 0 18.7464,-20h13.2526a7.75,7.75 0 1 0 0,-15.5h-7.75a53.6895,53.6895 0 0 0 0,-20h7.75a7.75,7.75 0 1 0 0,-15.5h-13.2526a53.6895,53.6895 0 0 0 -18.7464,-20z"/>
+					    <clipPath id="clip-three">
+					      <use xlink:href="#three"/>
+					    </clipPath>
+					  </defs>
+					  <use class="fill" xlink:href="#dee"/>
+					  <use class="fill" xlink:href="#three"/>
+					  <path class="stroke" style="display:none;" d="M0,10h7.75a35.5,35.5 0 1 1 0,71h-7.75"/>
+					  <path class="stroke" style="display:none;" clip-path="url(#clip-three)" d="M36.2510,10h32a17.75,17.75 0 0 1 0,35.5h-7.75h7.75a17.75,17.75 0 0 1 0,35.5h-32"/>
+					</svg>
+
+					<div class="text-center">by Chris Morrow</div>
+			  </div>
 
 			</svg>
 			</div>
 		</div>
 
+		<div class="slide">
+			
+		</div>
 
 
 
+		
 		<script src="js/lib/d3.v4.min.js"></script>
+
 	</body>
 </html>

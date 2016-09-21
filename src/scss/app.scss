@@ -1,5 +1,12 @@
-$gutter: 25px;
+@import 'core';
 
+$gutter: 25px;
+$orange: #ff6100;
+
+* {
+	margin:0;
+	padding:0;
+}
 
 html, body {
 	height: 100%;
@@ -7,11 +14,9 @@ html, body {
 }
 
 body {
-	font-family: 'Back Issues BB';
+	font-family: 'Squealer';
+	font-size: 24px;
 	background-color: #000;
-	background-image: url('../images/halftone-pattern-red.png');
-	background-position: left top;
-	background-size: 100%;
 }
 
 .caption {
@@ -44,17 +49,6 @@ body {
 	}
 }
 
-.slide {
-	position: absolute;
-	top: 50%;
-	margin-top: -325px;
-	height: 670px;
-	width: 100%;
-	background: #000;
-	border-top: solid 6px #000;
-	border-bottom: solid 6px #000;
-}
-
 .container {
 	max-width: 1200px;
 	padding: 0 $gutter;
@@ -65,45 +59,24 @@ body {
 	margin-top: $gutter;
 	font-size: 52px;
 }
-
-.d3-logo {
-	width: 200px;
-	height: 200px;
-}
-
 // Fire text
 #kickass {
-	position: absolute;
-	top: 100px;
-	height: 300px;
+	position: relative;
+	margin: 0 auto;
+	height: 200px;
 	width: 800px;
 }
-// .kickass {
-// 	font-family: Impact;
-// 	font-weight:bold;
-// 	font-size: 10em;
-// 	text-transform:uppercase;
-//   text-align:center;
-// 	background-clip:text;
-// 	-webkit-font-smoothing:antialiased;
-//   -webkit-background-clip:text;
-//   -moz-background-clip:text;
-//   background-clip:text;
-//   -webkit-text-fill-color:transparent;
-// 	background:url('../images/fire-loop.gif') left top repeat-x;
-// }
 
 .kickass {
 	font-family: Impact;
 	font-weight:bold;
-	font-size: 10em;
+	font-size: 160px;
 	text-transform:uppercase;
 
 	.text {
 	  fill: url(#firePattern);
 	  stroke: #fff;
 	  stroke-width: 2;
-	  stroke-opacity: .7;
 	  &.two {
 		  fill: url(#firePattern2);
 		}
@@ -119,12 +92,52 @@ body {
     margin:0 auto;
 }
 
-
-
 svg {
-	position:absolute;
   width: 100%;
   height: 100%;
 }
 
 
+
+// Title screen
+
+.title-screen {
+	padding-top: 80px;
+	color: #fff;
+	-webkit-text-stroke: 1px black;
+
+	h1 {
+	  font-size: 72px;
+	  background: -webkit-linear-gradient(#fff, #ccc);
+	  -webkit-background-clip: text;
+	  // -webkit-text-fill-color: transparent;
+		// color: rgba(0,0,0,0.4);
+		// text-shadow: 2px 4px 3px rgba(0,0,0,0.3), 0px -5px 21px rgba(255,255,255,0.5);
+    margin-bottom: $gutter;
+    // -webkit-text-stroke: .5px black;
+   color: #ccc;
+
+	}
+}
+
+.d3-logo {
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+
+	.fill {
+		fill: #000;
+	}
+	.stroke {
+		fill:none;
+		stroke: $orange;
+		stroke-width: 20px;
+	}
+
+	#dee, #three {
+		fill: url(#firePattern3);
+	}
+
+	stroke: #fff;
+}
