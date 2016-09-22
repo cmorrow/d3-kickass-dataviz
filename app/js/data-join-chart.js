@@ -34,7 +34,7 @@
             barHeight = 20,
             max = 15;
 
-        var x = d3.scale.linear()
+        var x = d3.scaleLinear()
             .range([0, width]);
 
         var chart = d3.select(id)

@@ -1,5 +1,6 @@
 $gutter: 25px;
 $orange: #ff6100;
+$highlight-color: #ff5000;
 
 
 .text-center {
@@ -7,6 +8,7 @@ $orange: #ff6100;
 }
 
 .metal {
+	font-family: 'Squealer';
 	color: #fff;
 	-webkit-text-stroke: .25px black;
 	-webkit-background-clip: text;
@@ -40,3 +42,5 @@ ul {
 	  padding-right: 5px;
 	}
 }
+
+

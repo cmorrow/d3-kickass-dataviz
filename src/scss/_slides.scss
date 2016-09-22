@@ -30,6 +30,22 @@
 			text-align: left;
 		}
 	}
+
+	.highlight {
+		color: $highlight-color;
+		@include stroke(1, #fff);
+	}
+
+	// .highlight {
+	// 	display:inline-block;
+	// 	color: $highlight-color;
+	// 	@include stroke(2, #fff);
+	// 	-webkit-background-clip: text;
+	// 	-webkit-text-fill-color: transparent;
+	// 	background-image: url('../images/fire.gif');
+	// 	background-repeat: repeat-x;
+
+	// }
 }
 .content-group {
 	padding-bottom: $gutter*2;

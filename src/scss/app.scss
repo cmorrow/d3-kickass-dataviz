@@ -1,3 +1,4 @@
+@import 'mixins';
 @import 'core';
 @import 'slides';
 
@@ -15,6 +16,7 @@ html, body {
 body {
 	font-family: 'Futura';
 	font-size: 24px;
+	// background: #000 url('../images/metal-bg-1920x1080.jpg') no-repeat left top;
 	background-color: #000;
 }
 

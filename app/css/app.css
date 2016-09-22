@@ -55,6 +55,9 @@ ul {
     margin-bottom: 25px; }
     .slide header h1 {
       text-align: left; }
+  .slide .highlight {
+    color: #ff5000;
+    text-shadow: -1px -1px 0 #fff, -1px 0px 0 #fff, -1px 1px 0 #fff, 0px -1px 0 #fff, 0px 0px 0 #fff, 0px 1px 0 #fff, 1px -1px 0 #fff, 1px 0px 0 #fff, 1px 1px 0 #fff; }
 
 .content-group {
   padding-bottom: 50px;
