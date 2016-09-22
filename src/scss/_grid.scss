@@ -1,0 +1,13 @@
+.row {
+	@extend .clearfix;
+
+	&.col-2 {
+		.col {
+			width: 50%;
+		}
+	}
+}
+
+.col {
+	float:left;
+}

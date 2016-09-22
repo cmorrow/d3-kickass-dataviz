@@ -1,11 +1,19 @@
 .text-center {
   text-align: center; }
 
+.clearfix:after, .row:after, .cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .metal, .slide header h1, #slide-title h1 {
   font-family: 'Squealer';
   color: #fff;
   -webkit-text-stroke: .25px black;
   -webkit-background-clip: text; }
+
+h2 {
+  font-size: 3em; }
 
 ul {
   color: #fff;
@@ -30,6 +38,12 @@ ul {
     background-position: center 0;
     background-size: 95%;
     padding-right: 5px; }
+
+.row.col-2 .col {
+  width: 50%; }
+
+.col {
+  float: left; }
 
 .slide {
   display: none;
@@ -180,3 +194,16 @@ svg {
   position: relative;
   font-size: 72px;
   margin-bottom: 25px; }
+
+.join.chart path {
+  fill-opacity: 0;
+  stroke: white;
+  stroke-width: 2px; }
+  .join.chart path.data {
+    fill: #00d911; }
+  .join.chart path.update {
+    fill: #ffaa00; }
+  .join.chart path.exit {
+    fill: #ff0410; }
+  .join.chart path:hover, .join.chart path.acitve {
+    fill-opacity: 1; }

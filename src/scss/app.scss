@@ -1,5 +1,6 @@
 @import 'mixins';
 @import 'core';
+@import 'grid';
 @import 'slides';
 
 * {
@@ -135,4 +136,30 @@ svg {
     margin-bottom: $gutter;
 
 	}
+}
+
+
+// Data Joins
+.join.chart {
+	path {
+		fill-opacity: 0;
+		stroke: rgb(255, 255, 255);
+		stroke-width: 2px;
+
+		&.data {
+			fill: rgb(0,217,17); //rgb(227, 119, 194);
+		}
+		&.update {
+			fill: rgb(255, 170, 0);
+		}
+		&.exit {
+			fill: rgb(255, 4, 16);
+		}
+		&:hover, &.acitve {
+			fill-opacity: 1;
+		}
+	}
+
+
+
 }

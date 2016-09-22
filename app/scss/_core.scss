@@ -7,11 +7,24 @@ $highlight-color: #ff5000;
 	text-align: center;
 }
 
+// clearfix
+.clearfix, .cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 .metal {
 	font-family: 'Squealer';
 	color: #fff;
 	-webkit-text-stroke: .25px black;
 	-webkit-background-clip: text;
+}
+
+h2 {
+	font-size: 3em;
 }
 
 ul {
